@@ -1,0 +1,56 @@
+/* Exercise description
+
+Write a program that asks user for two integers and prints the sum, difference, product and remainder of the two numbers.
+Example output:
+
+Input first integer: 5
+Input second integer: 9
+5+9 = 14
+5-9 = -4
+5*9 = 45
+Remainder: 5
+*/
+
+// Solution
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+    cout << "Input first integer: ";
+	int first;
+	cin >> first;
+
+	cout << "Input second integer: ";
+	int second;
+	cin >> second;
+
+	int sum;
+	sum = first + second;
+
+	int dif;
+	dif = first - second;
+
+	int prod;
+	prod = first * second;
+
+	int rem;
+	rem = first % second;
+	
+    cout << first << "+" << second << " = " << sum << endl;
+
+	cout << first << "-" << second << " = " << dif << endl;
+
+	cout << first << "*" << second << " = " << prod << endl;
+
+	cout << "Remainder: " << rem << endl;
+
+	return 0;
+
+	
+	
+	
+}
