@@ -1,0 +1,93 @@
+/* Exercise description
+
+Enhance the previous calculator program so that the user can choose which operation he wants to perform. The program first asks for the performed calculation. After this the program asks for the integers, performs the calculation and prints the result. Make the choice structure with switch() statement.
+
+Tip:
+
+Calculations are printed as follows:
+
+    Subtraction: x-y = z
+    Addition: x+y = z
+    Multiplication: x*y = z
+    Remainder: x%y = z
+
+Example output:
+
+Choose desired calculation:
+1: subtraction
+2: addition
+3: multiplication
+4: division
+5: Remainder
+Choose a calculation:3
+Input first number:15
+Input second number:4
+15*4 = 60
+*/
+
+// Solution
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    cout << "Choose desired calculation:" << endl;
+    cout << "1: subtraction" << endl;
+    cout << "2: addition" << endl;
+    cout << "3: multiplication" << endl;
+    cout << "4: division" << endl;
+    cout << "5: Remainder" << endl;
+    cout << "Choose a calculation:";
+    int x;
+    cin >> x;
+
+    int z, y;
+    cout << "Input first number:";
+    cin >> z;
+    cout << "Input second number:";
+    cin >> y;
+
+    int k;  // Declaring k here to avoid re-declaration issues
+
+    switch (x) {
+        case 1:
+            k = z - y;
+            cout << z << "-" << y << " = " << k << endl;
+            break;
+
+        case 2:
+            k = z + y;
+            cout << z << "+" << y << " = " << k << endl;
+            break;
+
+        case 3:
+            k = z * y;
+            cout << z << "*" << y << " = " << k << endl;
+            break;
+
+        case 4:
+            if (y != 0) {
+                k = z / y;  // Fixed division syntax
+                cout << z << "/" << y << " = " << k << endl;
+            } else {
+                cout << "Don't divide by 0" << endl;
+            }
+            break;
+
+        case 5:
+            if (y != 0) {
+                k = z % y;
+                cout << z << "%" << y << " = " << k << endl;
+            } else {
+                cout << "Don't divide by 0" << endl;
+            }
+            break;
+
+        default:
+            cout << "Error: Invalid calculation choice" << endl;
+    }
+
+    return 0;
+}
