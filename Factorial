@@ -1,0 +1,29 @@
+/* Exercise description
+Write a program that asks user for an integer n (n>0) and prints the factorial of that number on screen. Example: factorial of n is marked with n!, which means 1*2*3...n.
+Example output:
+
+Input an integer: 6
+The factorial of number 6 is 720
+*/
+
+// Solution
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Input an integer: ";
+    cin >> n;
+
+    int factorial = 1;
+
+    // Loop from 1 to n
+    for (int i = 1; i <= n; i++) {
+        factorial *= i;  // Multiply factorial by i
+    }
+
+    cout << "The factorial of number " << n << " is " << factorial << endl;
+
+    return 0;
+}
