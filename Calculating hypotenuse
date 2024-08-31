@@ -1,0 +1,46 @@
+/* Exercise description
+
+Write a program that calculates the hypotenuse of an orthogonal triangle based on the triangle legs inputted by the user. The leg lengths are assumed to be integers and the hypotenuse value is assigned into a double type variable.
+
+Tip:
+
+A square root can be calculated as follows (returns a double type value):
+
+double root = sqrt (double_number);
+
+You will need the cmath-library.
+Example output:
+
+Input first triangle leg: 8
+Input second triangle leg: 11
+Hypotenuse length: 13.6015
+*/
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+
+    int one;
+	cout << "Input first triangle leg: ";
+	cin >> one;
+
+	int two;
+	cout << "Input second triangle leg: ";
+    cin >> two;
+
+	double hyp;
+	hyp = pow(one, 2) + pow(two, 2);
+
+	double nohyp;
+	nohyp = sqrt(hyp);
+
+	cout << "Hypotenuse length: " << sqrt(hyp) << endl;
+
+	
+
+	
+	return 0;
+}
