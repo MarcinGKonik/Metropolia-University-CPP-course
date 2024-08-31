@@ -1,0 +1,51 @@
+/* 
+Write a program which asks the user whether they prefer coffee or tea, and how many sugar cubes they put in. The program's output depends on the user's answers:
+
+    Coffee, 0-2 cubes: "Coffee certainly is invigorating!"
+    Coffee, 3+ cubes: "Well, coffee can taste pretty intense..."
+    Tea, 0-2 cubes: "Tea can have a soothing effect!"
+    Tea, 3+ cubes: "Guess you enjoy your tea overly sweet?"
+    Otherwise: "An error occurred in the program!"
+
+The sugar cubes are handled as an integer variable and the drink as a character variable ('c'/'t'). Uppercase can be ignored.
+
+Tip:
+Spend enough time designing the program's flow before starting to write it.
+Example output:
+
+Do you drink coffee or tea? (k/t) t
+With how many cubes of sugar? 5
+Guess you enjoy your tea overly sweet?
+*/
+
+// Solution
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    cout << "Do you drink coffee or tea? (k/t) ";
+    char x;
+    cin >> x;
+    cout << "With how many cubes of sugar? ";
+    int z;
+    cin >> z;
+
+    if(z < 0){
+        cout << "An error occurred in the program!" << endl;
+    } else if( x == 'c' && z <= 2){
+        cout << "Coffee certainly is invigorating!" << endl;
+    } else if(x == 'c' && z >= 3) {
+        cout << "Well, coffee can taste pretty intense..." << endl;
+    } else if(x == 't' && z <= 2){
+        cout << "Tea can have a soothing effect!" << endl;
+    } else if(x == 't' && z >= 3){
+        cout << "Guess you enjoy your tea overly sweet?" << endl;
+    }  else {
+        cout << "An error occurred in the program!" << endl;
+    }
+
+    return 0;
+}
