@@ -1,0 +1,37 @@
+/* Exercise description
+
+5.1First try at programming with C++ Example solution
+Max score: 1
+
+The purpose of this exercise is to introduce you to writing programs with C++. Below is a C++ program. Your task is to rewrite it. In the next chapter you will learn how the program functions and what it actually does.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int number;
+
+    cout << "Input an integer:";
+    cin >> number;
+    cout << "You typed: " << number << endl;
+}
+
+Example output:
+
+Input an integer:12
+You typed: 12
+*/
+
+// Solution
+
+#include <iostream>
+
+int main(){
+    int number;
+
+	std::cout << "Input an integer:";
+	std::cin >> number;
+	std::cout << "You typed: " << number << std::endl;
+	
+}
